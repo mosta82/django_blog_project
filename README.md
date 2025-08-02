@@ -18,11 +18,11 @@ A simple and clean blog application built with Django. Users can view blog posts
 
 | Homepage |
 
-![alt text](image-1.png)
+django_blog_project/mysite/screenshots/home.png
  
 | Create Post |
 
-![alt text](image.png) 
+django_blog_project/mysite/screenshots/create.png
 
 
 
@@ -59,7 +59,7 @@ mysite/
 
 ### 1. Clone the repository
 
-```bash
+
 git clone https://github.com/mosta82/django_blog_project.git
 cd django_blog_project
 
