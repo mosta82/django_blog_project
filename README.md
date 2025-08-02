@@ -16,16 +16,15 @@ A simple and clean blog application built with Django. Users can view blog posts
 
 ## 🖼️ Screenshots
 
-| Homepage |
+### Homepage
 
-django_blog_project/mysite/screenshots/home.png
- 
-| Create Post |
+![Homepage](screenshots/home.png)
 
-django_blog_project/mysite/screenshots/create.png
+---
 
+### Create Post
 
-
+![Create Post](screenshots/create.png)
 
 ---
 
@@ -52,6 +51,7 @@ mysite/
 ├── mysite/
 │   └── settings.py
 └── manage.py
+├── README.md
 
 ---
 
