@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 20px auto; }
+        .post { border-bottom: 1px solid #ccc; padding: 10px 0; }
+        .post h2 { margin: 0; }
+        .post p { margin-top: 5px; }
+        .top-link { margin-bottom: 20px; display: flex; justify-content: space-between; }
+        a.button {
+            padding: 6px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-link">
+        <h1>Blog Posts</h1>
+        <a class="button" href="{% url 'create_post' %}">➕ Create New Post</a>
+    </div>
+
+    {% for post in posts %}
+        <div class="post">
+            <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+            <small>{{ post.created_at }}</small>
+            <p>{{ post.content|truncatechars:100 }}</p>
+        </div>
+    {% empty %}
+        <p>No posts yet.</p>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Blog Post</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 20px auto; }
+        form { display: flex; flex-direction: column; }
+        input, textarea { margin-bottom: 10px; padding: 8px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Create New Blog Post</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Publish</button>
+    </form>
+    <a href="/">← Back to Home</a>
+</body>
+</html>

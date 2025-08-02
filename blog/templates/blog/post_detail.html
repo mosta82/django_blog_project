@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 20px auto; }
+        a { display: block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <a href="/">← Back to Home</a>
+    <h1>{{ post.title }}</h1>
+    <small>{{ post.created_at }}</small>
+    <p>{{ post.content }}</p>
+</body>
+</html>
