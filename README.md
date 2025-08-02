@@ -39,56 +39,93 @@ A simple and clean blog application built with Django. Users can view blog posts
 
 ## 📁 Project Structure
 
-mysite/
-├── blog/
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   ├── forms.py
-│   └── templates/blog/
-├── static/
-│   └── blog/style.css
+```
+django_blog_project/
 ├── mysite/
-│   └── settings.py
-└── manage.py
-├── README.md
-
+│   ├── .git/                             
+│   ├── blog/                              
+│   │   ├── __init__.py                    
+│   │   ├── __pycache__/                   
+│   │   ├── admin.py                   
+│   │   ├── apps.py                       
+│   │   ├── forms.py                     
+│   │   ├── migrations/                    
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__/
+│   │   │   └── 0001_initial.py            
+│   │   ├── models.py                    
+│   │   ├── static/                        
+│   │   │   └── blog/
+│   │   │       └── style.css             
+│   │   ├── templates/                   
+│   │   │   └── blog/
+│   │   │       ├── create_post.html    
+│   │   │       ├── home.html              
+│   │   │       └── post_detail.html       
+│   │   ├── tests.py                       
+│   │   ├── urls.py                        
+│   │   └── views.py                      
+│   ├── mysite/                            
+│   │   ├── __init__.py                   
+│   │   ├── __pycache__/                   
+│   │   ├── asgi.py                    
+│   │   ├── settings.py                   
+│   │   ├── urls.py                       
+│   │   └── wsgi.py                       
+│   ├── screenshots/                       
+│   │   ├── create.png                    
+│   │   └── home.png                     
+│   ├── db.sqlite3                        
+│   ├── manage.py                       
+│   ├── README.md                          
+│   └── requirements.txt               
+└── venv/ 
+```
 ---
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the repository
-
+### 
+**1. Clone the repository**
 
 git clone https://github.com/mosta82/django_blog_project.git
+
 cd django_blog_project
 
-2. Create and activate a virtual environment
+**2. Create and activate a virtual environment**
 
 python -m venv venv
+
 # Windows
+
 venv\Scripts\activate
+
 # macOS/Linux
+
 source venv/bin/activate
 
-3. Install dependencies
+**3. Install dependencies**
 
 pip install -r requirements.txt
 
-4. Run migrations
+**4. Run migrations**
 
 python manage.py migrate
 
-5. Start the server
+**5. Start the server**
 
 python manage.py runserver
+
 Then go to: http://127.0.0.1:8000/
 
-🔐 Admin Access
+**🔐 Admin Access**
+
 python manage.py createsuperuser
+
 Then visit: http://127.0.0.1:8000/admin
 
-Author
+**Author**
+
 MD. Mostafizur Rahman – @mosta82
 
 
